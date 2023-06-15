@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    tools:context=".activities.Signup">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_signup_screen"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/tv_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:text="@string/create_account"
+        android:textColor="@color/clr_white"
+        android:textSize="@dimen/text_size_24dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_signup_screen"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl_login"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="110dp"
+
+        android:background="@drawable/fl_corner_bg_up"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_account"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="10dp"
+
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/unameSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/clr_white"
+                android:hint="@string/user_name"
+                android:inputType="text"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="10dp"
+
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmailSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/clr_white"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="10dp"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordsignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/clr_white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="235dp"
+
+
+            android:padding="5dp"
+            android:text="@string/pass_text"
+            android:textSize="10dp"
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="255dp"
+            android:layout_marginEnd="10dp"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRepasswordsignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/clr_white"
+                android:hint="@string/re_password"
+                android:inputType="textPassword"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="310dp"
+
+            >
+
+            <CheckBox
+                android:id="@+id/checkbox_signin"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp"
+                android:text="@string/i_agree"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/text_size_16dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp"
+                android:text="@string/terms_conditions"
+                android:textColor="@color/clr_blue"
+                android:textSize="@dimen/text_size_16dp"
+
+                />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login_signup"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/btn_bg_color_blue"
+
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="@string/signup"
+            android:textColor="@color/clr_white" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MapsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_map_screen"
+        android:layout_width="match_parent"
+
+        android:layout_height="?attr/actionBarSize"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_maps_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="@string/map"
+            android:textColor="@color/clr_black"
+            android:textSize="20dp"
+
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!--<fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_map_screen"
+
+        />-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_map_screen"
+        tools:context=".MapsActivity" />
+
+    <TextView
+        android:id="@+id/addressInput"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mar_start_map_activity"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/address"
+
+        android:textColor="@color/clr_cement"
+        android:textSize="13dp"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/map"
+
+        tools:ignore="TextSizeCheck,UnknownId" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_address"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:focusable="false"
+
+        android:focusableInTouchMode="false"
+
+
+        android:text="@string/place_address"
+
+        android:textSize="@dimen/text_size_16dp"
+
+        app:layout_constraintEnd_toStartOf="@id/img_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressInput"
+
+
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/img_nav"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/nav_img"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_address"
+        app:layout_constraintTop_toBottomOf="@id/addressInput"
+
+        />
+
+    <TextView
+        android:id="@+id/dateInput"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mar_start_map_activity"
+        android:layout_marginTop="@dimen/mar_start_map_activity"
+
+
+        android:text="@string/date_and_time"
+        android:textColor="@color/clr_cement"
+        android:textSize="13dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_address"
+
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_date"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mar_start_map_activity"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/roboto_regular"
+
+        android:textColor="@color/clr_black"
+        android:textSize="@dimen/text_size_16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateInput"
+
+
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uploadbutton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="150dp"
+
+        android:background="@drawable/btn_bg_color_blue"
+
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/update_location"
+        android:textColor="@color/clr_white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

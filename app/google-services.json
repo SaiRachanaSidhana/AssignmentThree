@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "878730466495",
+    "project_id": "assignmentthree-ad5cf",
+    "storage_bucket": "assignmentthree-ad5cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878730466495:android:3b4eb04405aef99954620a",
+        "android_client_info": {
+          "package_name": "com.example.assignmentthree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878730466495-dbsob9ltci79rqhphlt7qaghqn25f0hr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7DbV3gJ6x68Dy9Mc0uNR_Dkh97fRQBak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878730466495-dbsob9ltci79rqhphlt7qaghqn25f0hr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

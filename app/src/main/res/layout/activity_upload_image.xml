@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UploadImage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar_upload_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_gallery_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/gallery"
+            android:textColor="@color/clr_black"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:id="@+id/view_upload_img"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_upload_img"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/upload_image_card_view"
+        android:src="@drawable/img_cloud"
+        android:background="@drawable/card_img_bg"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/view_upload_img"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadImage_btn"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/btn_bg_color_blue"
+        android:text="@string/upload_image"
+        android:textColor="@color/clr_white"
+        android:textSize="@dimen/text_size_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_image_card_view"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
